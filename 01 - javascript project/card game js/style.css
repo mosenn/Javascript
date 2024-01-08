@@ -1,0 +1,46 @@
+*,
+::after,
+::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	perspective: 1000px;
+}
+.card {
+	width: 100%;
+	margin: 15px;
+	position: relative;
+	border: 1px solid black;
+	width: 250px;
+	height: 250px;
+	transform-style: preserve-3d;
+	transition: all 0.4s;
+}
+.card > img {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	padding: 10px;
+	transform: rotateY(-180deg);
+	backface-visibility: hidden;
+}
+.front-card {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	background: rgb(65, 65, 93);
+	backface-visibility: hidden;
+}
+
+.card.flip-card {
+	transform: rotateY(180deg);
+	transform-style: preserve-3d;
+}

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+button {
+	font-weight: bold;
+	cursor: pointer;
+	padding: 8px;
+	width: 40%;
+	max-width: 100px;
+	margin-left: 5px;
+	border: none;
+	border-radius: 5px;
+	transition: all 0.4s;
+	border: 2px solid rgb(209, 217, 238);
+}
+
+body {
+	background-repeat: no-repeat;
+	background-image: url('imgs/tom-morel-ktVazL5c7FM-unsplash.jpg');
+}
+button:hover {
+	background: rgba(209, 217, 238);
+	color: rgb(22, 24, 128);
+	border: 2px solid rgba(160, 121, 197, 0.247);
+}
+img {
+	width: 94%;
+
+	max-width: 383px;
+	max-height: 150px;
+	object-fit: cover;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+form {
+	padding: 15px;
+	margin: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form > input {
+	width: 70%;
+	max-width: 600px;
+	padding: 8px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	border: 1px solid gray;
+}
+input::placeholder {
+	font-weight: bold;
+	padding: 5px;
+}
+header {
+	font-weight: bold;
+	color: rgb(59, 59, 59);
+	padding: 15px;
+	margin: 15px;
+	border: 1px solid rgb(253, 242, 242);
+	font-size: 0.7rem;
+	text-align: center;
+	background: rgb(241, 241, 241);
+}
+
+header > h3 {
+	margin-top: 20px;
+}
+.main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 100%;
+	gap: 20px;
+}
+
+.main > h1 {
+	width: 100%;
+	max-width: 100%;
+	border: 1px solid red;
+}
+.show-inp-valid-massge {
+	border: 1px solid red;
+	padding: 15px;
+	color: rgb(131, 66, 66);
+	grid-column: 1/4;
+	text-align: center;
+	background: white;
+	margin: 15px;
+	transition: all 0.4s;
+	font-size: 0.7rem;
+}
+.main > figure > figcaption {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	/* border: 1px solid red; */
+	padding: 10px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	color: #fff;
+}
+.main > figure > button {
+	width: 100%;
+	max-width: 87%;
+	margin-top: 10px;
+	margin-left: 7px;
+}
+
+.showdetail {
+	background: rgb(241, 241, 241);
+	position: fixed;
+	top: 0px;
+	height: 100vh;
+	padding: 20px;
+	margin: 20px;
+	z-index: 999;
+	overflow: scroll;
+
+	opacity: 0;
+	visibility: hidden;
+	transform: translate(0px, -200px);
+	transition: all 0.4s;
+}
+.showdetail.activ-showdetail {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0px, 0px);
+}
+
+.showdetail > div {
+	text-align: right;
+	font-weight: bold;
+	cursor: pointer;
+	animation: closedDetailanimate 1s ease-in-out alternate infinite;
+}
+
+@keyframes closedDetailanimate {
+	from {
+		letter-spacing: 2px;
+	}
+	to {
+		letter-spacing: 5px;
+	}
+}
+.showdetail > h1 {
+	padding: 15px;
+
+	margin-top: 15px;
+	text-align: center;
+}
+.showdetail > figure {
+	border: 1px solid rgb(209, 209, 209);
+}
+.showdetail > figure > img {
+	width: 100%;
+	max-width: 100%;
+	max-height: 250px;
+}
+.showdetail > nav {
+	border-bottom: 1px solid gray;
+}
+.showdetail > nav > ul {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: 20px 20px;
+}
+.showdetail > nav > ul > li {
+	border: 1px solid rgb(201, 202, 201);
+	margin: 5px;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.showdetail > article {
+	margin: 15px;
+}
+.showdetail > article > p {
+	line-height: 35px;
+}
+
+/* for overfloe body */
+body.hidden-over-flow {
+	overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+	.main {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.main > figure {
+		text-align: center;
+	}
+
+	.main > figure > button {
+		padding: 5px;
+		width: 100%;
+		max-width: 60%;
+		margin-left: 12px;
+		font-size: 17px;
+		font-weight: bold;
+	}
+	img {
+		width: 94%;
+	}
+	header {
+		font-size: 1rem;
+	}
+
+	.show-inp-valid-massge {
+		font-size: 1rem;
+	}
+
+	.main > figure > figcaption {
+		font-size: 1rem;
+	}
+}

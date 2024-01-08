@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: linear-gradient(
+		90deg,
+		rgb(132, 112, 148) 11%,
+		rgba(24, 53, 71, 0.7392158742331288) 91%
+	);
+}
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+section > div {
+	margin: 15px;
+	width: 90%;
+	max-width: 600px;
+	border: 1px solid rgb(204, 203, 224);
+	padding: 15px;
+	margin: 15px;
+	border-radius: 5px;
+	background: whitesmoke;
+	box-shadow: 2px 2px 5px whitesmoke, -2px -2px 5px whitesmoke;
+}
+section > div > ul > li {
+	margin: 25px 0px;
+	list-style-type: none;
+}
+/* section > div > ul {
+    display: none;
+} */
+
+section > div > ul > li > h3 {
+	margin: 25px 0px;
+}
+.show-massege {
+	border: 1px solid rgb(229, 237, 241);
+
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+.show-massege.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
+.show-result-quiz {
+	background: rgba(168, 190, 202, 0.301);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 15px;
+	margin: 15px;
+
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgb(170, 170, 170);
+}
+.show-result-quiz > button {
+	margin: 20px;
+	padding: 5px;
+	width: 100px;
+	cursor: pointer;
+}
+
+.show-result-quiz > p {
+	font-size: 20px;
+}
+
+#Submit {
+	padding: 5px;
+	margin: 15px;
+	width: 150px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btn {
+	padding: 15px;
+	border-radius: 5px;
+	width: fit-content;
+	background: white;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+ul,
+li {
+	list-style-type: none;
+}
+
+nav > ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+
+nav > ul > li {
+	cursor: pointer;
+	padding: 5px;
+	margin: 5px;
+	color: rgb(219, 224, 240);
+	font-size: 25px;
+	transition: all 0.4s;
+}
+nav > ul > li > a {
+	transition: all 0.4s;
+}
+nav > ul > li > a:hover span,
+nav > ul > li:hover span,
+nav > ul > li:hover {
+	color: rgb(7, 34, 68);
+}
+nav > ul > li > a:hover i,
+nav > ul > li:hover i {
+	color: rgb(69, 58, 168);
+}
+nav > ul > li > a {
+	color: rgb(219, 224, 240);
+
+	text-decoration: none;
+}
+nav > ul > li,
+nav > ul > li > a {
+	display: flex;
+	justify-content: baseline;
+	align-items: baseline;
+}
+nav > ul > li > a > i {
+	margin-right: 15px;
+}
+nav > ul > li > a > span,
+nav > ul > li > span {
+	font-size: 17px;
+}
+@media screen and (min-width: 768px) {
+	section {
+		display: flex;
+		flex-direction: row;
+	}
+}

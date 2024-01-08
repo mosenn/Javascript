@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	font-family: 'Poppins', sans-serif;
+	background-image: linear-gradient(
+		to left top,
+		#375c92,
+		#6f7f97,
+		#5b81af,
+		#7da5cf,
+		#a1cbf0
+	);
+	height: 100vh;
+}
+
+form {
+	margin-top: 50px;
+	width: 50%;
+	display: flex;
+	padding: 15px;
+}
+form > input {
+	padding: 5px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	border: 2px solid skyblue;
+	width: 100%;
+}
+form > button {
+	cursor: pointer;
+	margin: 0px 15px;
+	width: 100px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	background: rgb(192, 211, 219);
+	color: rgb(102, 96, 190);
+}
+ul,
+li {
+	list-style-type: none;
+}
+ul {
+	border: 1px solid rgba(255, 255, 255, 0.493);
+	margin-top: 20px;
+	padding: 25px;
+	box-shadow: 2px 2px 25px rgb(253, 247, 247);
+	background: rgb(240, 240, 240);
+	border-radius: 5px;
+}
+li {
+	padding: 10px;
+	text-align: center;
+	margin: 15px;
+	width: fit-content;
+	background: rgb(210, 210, 236);
+	border-radius: 5px;
+}
+ul {
+	width: 100%;
+
+	max-width: 60%;
+}
+ul > button {
+	border: none;
+	padding: 12px;
+	border-radius: 5px;
+	margin: 0px 10px;
+	cursor: pointer;
+	font-weight: bold;
+	border: 1px solid gray;
+}
+ul > button:disabled {
+	border: 1px solid rgb(216, 216, 216);
+	color: rgb(163, 163, 163);
+}
+
+button {
+	transition: 0.4;
+}
+button:disabled:hover {
+	color: red;
+	color: rgba(128, 128, 128, 0.699);
+	background: transparent;
+}
+
+button:hover {
+	color: white;
+	background-color: rgb(95, 95, 160);
+}
+
+/* js class */
+.Compelete {
+	background: rgb(128, 157, 211);
+	border-radius: 5px;
+	color: white;
+}
+
+.editing {
+	font-size: 20px;
+	color: greenyellow;
+	background: rgb(45, 3, 114);
+}
+
+.showHideCheckBox {
+	display: none;
+}
+
+.container {
+	background: gray;
+	display: flex;
+	flex-direction: column;
+}

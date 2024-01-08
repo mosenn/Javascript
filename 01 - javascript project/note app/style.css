@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	background: rgb(121, 56, 168);
+	background: linear-gradient(
+		90deg,
+		rgba(121, 56, 168, 1) 0%,
+		rgba(55, 97, 130, 1) 0%,
+		rgba(0, 18, 71, 1) 100%,
+		rgba(28, 53, 68, 1) 100%
+	);
+	height: 100vh;
+	font-family: 'Poppins', sans-serif;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+.top-menu > li {
+	background: white;
+}
+.top-menu > li,
+button {
+	padding: 10px;
+	margin: 5px;
+	width: fit-content;
+	border: none;
+	outline: none;
+	border: 1px solid white;
+	color: white;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	background: rgb(124, 97, 197);
+	box-shadow: 2px 2px 15px rgb(33, 14, 99);
+	transition: 0.4s;
+}
+.top-menu > li:hover,
+button:hover {
+	background: rgb(73, 56, 133);
+	color: white;
+	box-shadow: none;
+}
+.container {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	margin: 20px;
+	margin-top: 150px;
+	padding: 20px;
+	gap: 15px;
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.top-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid gray;
+	padding: 15px;
+	margin-top: 60px;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background: rgb(239, 235, 235);
+	z-index: 9999;
+}
+.main {
+	border: 1px solid rgba(121, 121, 121, 0.5);
+	text-align: center;
+	padding: 0px 15px;
+	background: rgba(255, 255, 255, 0.993);
+	width: 80%;
+	height: 100px;
+	border-radius: 5px;
+	position: relative;
+	resize: none;
+	margin-bottom: 15px;
+}
+
+.textarea.hidden {
+	display: none;
+}
+.textarea {
+	resize: none;
+	margin: 15px;
+	width: 50%;
+	height: 80px;
+	padding: 15px;
+}
+
+.notes {
+	border: 1px solid rgb(214, 214, 214);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.637);
+	border-radius: 5px;
+	box-shadow: inset 5px 5px 15px rgba(224, 224, 224, 0.794),
+		inset -5px -5px 15px rgb(207, 207, 207);
+}
+
+.tools {
+	padding: 5px;
+	width: 80%;
+	text-align: center;
+	border: 1px solid rgb(255, 255, 255);
+	margin: 15px;
+}
+
+.edit {
+	width: 100px;
+}
+
+.delete {
+	width: 100px;
+}
+
+nav > .header-top-menu {
+	border: 1px solid rgb(95, 117, 168);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	background: rgb(246, 241, 241);
+}
+
+.header-top-menu {
+	width: 100%;
+	position: fixed;
+	z-index: 99999999999;
+	top: 0px;
+	left: 0px;
+	border-radius: 5px;
+	transition: 0.4s;
+}
+.header-top-menu > li {
+	cursor: pointer;
+	margin: 7px;
+	padding: 5px;
+}
+
+.header-top-menu > li > a:hover span,
+.header-top-menu > li:hover span {
+	color: rgb(7, 34, 68);
+}
+.header-top-menu > li > a:hover i,
+.header-top-menu > li:hover i {
+	color: rgb(69, 58, 168);
+}
+.header-top-menu > li > a {
+	color: rgb(91, 105, 205);
+	font-size: 20px;
+	text-decoration: none;
+	font-size: 25px;
+	transform: scale(1);
+	display: block;
+	transition: all 0.4s;
+}
+
+.header-top-menu > li:nth-of-type(1) a:hover {
+	color: rgb(23, 6, 99);
+	transform: scale(1.2);
+}
+.header-top-menu > li:nth-of-type(2) a:hover {
+	color: rgb(6, 99, 38);
+	transform: scale(1.2);
+}
+.header-top-menu > li:nth-of-type(3) a:hover {
+	color: rgb(28, 8, 51);
+	transform: scale(1.2);
+}
+.header-top-menu > li:nth-of-type(4) a:hover {
+	color: rgb(30, 15, 159);
+	transform: scale(1.2);
+}
+.header-top-menu > li:nth-of-type(5) a:hover {
+	color: rgb(30, 15, 159);
+	transform: scale(1.2);
+}
+.header-top-menu > li:nth-of-type(6) a:hover {
+	transform: scale(1.2);
+	color: #cf4379;
+	height: fit-content;
+}
+.header-top-menu > li:nth-of-type(8) a:hover {
+	transform: scale(1.2);
+	color: #b65a1d;
+	transform: rotate(50deg);
+}
+
+.phone {
+	padding: 0 5px 5px 0px;
+	color: darkblue;
+	font-size: 1.2rem;
+}
+
+.phone > span {
+	margin-right: 10px;
+}
+
+.main-web-name {
+	font-size: 0.9rem;
+	position: absolute !important;
+	background: red !important;
+}
+
+.header-top-menu.ShowMenu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	transform: translateY(-100%);
+}
+.angel-right {
+	transform: translate(-25px, 5px);
+}
