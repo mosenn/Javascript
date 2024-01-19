@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script>
+        const Technology = [{ name: 'nodejs' }, { name: "reactjs" }, { name: "javascript" }]
+
+        const stringify = localStorage.setItem('Technology', JSON.stringify(Technology))
+        const parse = JSON.parse(localStorage.getItem('Technology'))
+  
+        const root = document.querySelector('#root')
+        root.innerHTML = `${parse.map((items)=> {return items.name}).join(' ')}`
+     
+    </script>
+</body>
+
+</html>
